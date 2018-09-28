@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Controls - L&amp;L IRIS</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <div class="spacer"></div>
+        <img src="assets/iris-logo.png">
+      </div>
+      <div class="settings">
+        <div class="control-container">
+          <div class="control">
+            <label>Controls</label>
+            <button id="play" class="icon" title="play">&#9654;</button>
+            <button id="pause" class="icon" title="pause">&#9646;&#9646;</button>
+            <button id="fullscreen" class="icon" title="fullscreen">&#128470;</button>
+            <button id="leaveFullscreen" class="icon" title="window">&#128471;</button>
+          </div>
+          <div class="control">
+            <label>Renderer Size</label>
+            <input id="rendererSize" type="number" min="1" max="2048">
+          </div>
+          <div class="control">
+            <label>Nth Frame</label>
+            <input id="nthFrame" type="number" min="1" max="6">
+          </div>
+          <div class="control">
+              <label>Horizontal Offset</label>
+              <input id="xOffset" type="range" min="-1" max="1" step="0.001">
+          </div>
+          <div class="control">
+              <label>Vertical Offset</label>
+              <input id="yOffset" type="range" min="-1" max="1" step="0.001">
+          </div>
+          <div class="control">
+              <label>Scale</label>
+              <input id="scale" type="range" min="0.1" max="3" step="0.001">
+          </div>
+          <div class="spacer">
+          </div>
+        </div>
+        <div class="rings">
+          <div class="ring">
+            <h2>Ring A</h2>
+            <label>Video</label>
+            <input id="channelRingAVideo" type="text">
+            <label>Playback Speed</label>
+            <input id="channelRingAPlaybackSpeed" type="range" min="0" max="10" step="0.001">
+            <div class="colorMixer">
+              <div class="colorMixerComponent">
+                <label>Sides</label>
+                <input id="channelRingASides" type="range" min="1" max="12" step="1">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Angle</label>
+                <input id="channelRingAAngle" type="range" min="0" max="1" step="0.001">
+              </div>
+            </div>
+            <div class="colorMixer">
+              <div class="colorMixerComponent">
+                <label>Vignette Size</label>
+                <input id="channelRingAVignetteSize" type="range" min="0" max="3" step="0.001">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Vignette Trigger</label>
+                <input id="channelRingAVignetteTrigger" type="range" min="0" max="1" step="0.001">
+              </div>
+            </div>
+            <div class="colorMixer">
+              <div class="colorMixerComponent">
+                <label>Red</label>
+                <input id="channelRingARed" type="range" min="-1" max="1" step="0.001">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Green</label>
+                <input id="channelRingAGreen" type="range" min="-1" max="1" step="0.001">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Blue</label>
+                <input id="channelRingABlue" type="range" min="-1" max="1" step="0.001">
+              </div>
+            </div>
+            <div class="spacer">
+            </div>
+          </div>
+          <div class="ring">
+            <h2>Ring B</h2>
+            <label>Video</label>
+            <input id="channelRingBVideo" type="text">
+            <label>Playback Speed</label>
+            <input id="channelRingBPlaybackSpeed" type="range" min="0" max="10" step="0.001">
+            <div class="colorMixer">
+              <div class="colorMixerComponent">
+                <label>Sides</label>
+                <input id="channelRingBSides" type="range" min="1" max="12" step="1">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Angle</label>
+                <input id="channelRingBAngle" type="range" min="0" max="1" step="0.001">
+              </div>
+            </div>
+            <div class="colorMixer">
+              <div class="colorMixerComponent">
+                <label>Vignette Size</label>
+                <input id="channelRingBVignetteSize" type="range" min="0" max="3" step="0.001">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Vignette Trigger</label>
+                <input id="channelRingBVignetteTrigger" type="range" min="0" max="1" step="0.001">
+              </div>
+            </div>
+            <div class="colorMixer">
+              <div class="colorMixerComponent">
+                <label>Red</label>
+                <input id="channelRingBRed" type="range" min="-1" max="1" step="0.001">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Green</label>
+                <input id="channelRingBGreen" type="range" min="-1" max="1" step="0.001">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Blue</label>
+                <input id="channelRingBBlue" type="range" min="-1" max="1" step="0.001">
+              </div>
+            </div>
+            <div class="spacer">
+            </div>
+          </div>
+        </div>
+        <div class="mixer">
+          <div class="crossfader-label"><span>Ring A</span><span class="spacer"></span><span>Ring B</span></div>
+          <input id="channelMixAmount" type="range" min="0" max="1" step="0.001">
+        </div>
+        <div class="overlay">
+            <h2>Waveform</h2>
+            <div class="colorMixer">
+              <div class="colorMixerComponent">
+                <label>Size</label>
+                <input id="channelSpectrumSize" type="range"  min="0.1" max="0.5" step="0.001">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Scale</label>
+                <input id="channelSpectrumScale" type="range"  min="0" max="0.5" step="0.001">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Mix</label>
+                <input id="channelSpectrumMix" type="range"  min="0" max="1" step="0.001">
+              </div>
+            </div>
+            <div class="colorMixer">
+              <div class="colorMixerComponent">
+                <label>Red</label>
+                <input id="channelSpectrumRed" type="range" min="0" max="1" step="0.001">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Green</label>
+                <input id="channelSpectrumGreen" type="range" min="0" max="1" step="0.001">
+              </div>
+              <div class="colorMixerComponent">
+                <label>Blue</label>
+                <input id="channelSpectrumBlue" type="range" min="0" max="1" step="0.001">
+              </div>
+            </div>
+            <label>Logo</label>
+            <input id="channelLogo" type="text">
+        </div>
+        <div class="master">
+          <div class="master-label">Master</div>
+          <input class="crossfader" id="master" type="range" min="0" max="1" step="0.001">
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    require('./renderer.js')
+  </script>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "LuxAndLucidIris",
+  "version": "1.0.0",
+  "description": "Video Mandalas",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron"
+  ],
+  "author": "rnd7",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  },
+  "dependencies": {
+    "three": "^0.84.0",
+    "three-effectcomposer": "0.0.1"
+  }
+}
